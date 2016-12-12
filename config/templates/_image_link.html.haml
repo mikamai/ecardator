@@ -1,0 +1,8 @@
+- if @cmp == ""
+  %a{:href => "#{@link}", :target => "_blank"}
+- else
+  - if @link.index('?') != nil
+    %a{:href => "#{@link}=newsletter=mail=#{@cmp}", :target => "_blank"}
+  - else
+    %a{:href => "#{@link}?utm_source=newsletter=mail=#{@cmp}", :target => "_blank"}
+%img#img1{:alt => "#{@alt}", :border => "0", :src => "#{@src}", :style => "display: block; margin: 0; padding: 0; width:100%; max-width:#{@width}px; max-height:#{@height}px;"}/

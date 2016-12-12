@@ -10,13 +10,24 @@ class Ecard
   	false
 	end
 
+  # bisogna cambiare la logica che c'era in ERB
+  # per lo HAML provare a linkare direttamente il partial che serve.
+
   def content
-    template = ERB::new File.read("config/templates/template.html.erb")
-    pre_header_template = ERB::new(File.read("config/templates/_pre_header.html.erb")).result binding
-    image_link_template = ERB::new(File.read("config/templates/_image_link.html.erb")).result binding
-    no_image_link_template = ERB::new(File.read("config/templates/_no_image_link.html.erb")).result binding
-    forward_template = ERB::new(File.read("config/templates/_forward.html.erb")).result binding
-    template.result binding
+    # haml_template = File.read('config/templates/_pre_header.html.haml')
+    # template_engine = Haml::Engine.new(haml_template)
+    # template = template_engine.render(self)
+    template = Haml::Engine.new(File.read("config/templates/template.html.haml"))
+    pre_header_template = Haml::Engine.new(File.read("config/templates/_pre_header.html.haml")).render
+    template.render
+  end
+
+  def image_link_template
+    image_link_template = Haml::Engine.new(File.read("config/templates/_image_link.html.haml")).render
+  end
+
+  def no_image_link_template
+    no_image_link_template = Haml::Engine.new(File.read("config/templates/_no_image_link.html.haml")).render
   end
 
   def write_on_file

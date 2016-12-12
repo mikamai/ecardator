@@ -1,0 +1,8 @@
+- if @lang == "zhs" or @lang == "jp" or @lang == "kr"
+  %br/
+  %a{:href => "${taf_url}$&lang=en", :style => "font-family: arial; font-size: 10px; line-height: 13px; "}
+    = I18n.t(@brand + '.forward')
+- else
+  %br/
+  %a{:href => "${taf_url}$=#{lang}", :style => "font-family: arial; font-size: 10px; line-height: 13px; "}
+    = I18n.t(@brand + '.forward')
