@@ -1,0 +1,9 @@
+<% if @lang == "zhs" or @lang == "jp" or @lang == "kr" %>
+  <br>
+  <a style="font-family: arial; font-size: 10px; line-height: 13px; " href="${taf_url}$&lang=en"><%= I18n.t(@brand + '.forward') %>
+  </a>
+<% else %>
+  <br>
+  <a style="font-family: arial; font-size: 10px; line-height: 13px; " href="${taf_url}$&lang=<%= lang %>"><%= I18n.t(@brand + '.forward') %>
+  </a>
+<% end %>

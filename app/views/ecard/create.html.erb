@@ -1,0 +1,12 @@
+<%= render :inline => @ecard.content %>
+
+<div class="download_btn audioButton">
+  <%= audio_tag "http://www.mcello63.com/suonerie_varie/Sciacquone%20di%20WC.mp3", class: "audio-play" %>
+  <%= link_to "Download Ecard", ecard_download_path %>
+</div>
+<script>
+$(".audioButton").on("click", function() {
+  $(".audio-play")[0].currentTime = 0;
+  return $(".audio-play")[0].play();
+});
+</script>

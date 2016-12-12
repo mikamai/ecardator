@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'terminator_real_nfiregular';
+    src: url('fonts/terminator_real_nfi-webfont.woff2') format('woff2'),
+         url('fonts/terminator_real_nfi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+  font-family: 'terminator_real_nfiregular';
+}
+
+
+body {
+    background: url(terminator.jpg);
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22pt;
+    color: #FFFFFF;
+}
+h2 {
+    text-align: center;
+    font-size: 12pt;
+    color: #FFFFFF;
+    margin-top: -10px;
+}
+
+.content {
+    margin-bottom: 70px;
+    margin-top: 25px;
+}
+
+form {
+    margin: auto;
+    width: 80%;
+    background-color: rgba(255,255,255,0.8);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.form-div
+{
+    width: 90%;
+    margin: auto;
+}
+
+.form-select {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    padding-bottom: 10px;
+    border-bottom:1px solid #989898;
+    margin-bottom: 20px;
+}
+    .first-form-select_1 {
+        display: table-cell;
+    }
+    .first-form-select_2 {
+        display: table-cell;
+        text-align: center;
+    }
+    .first-form-select_3 {
+        display: table-cell;
+        text-align: right;
+    }
+
+select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+input {
+	width: 100%;
+    padding: 12px 20px;
+    margin: 2px 0 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    width: 6%;
+    height: 35%;
+}
+
+input[type=text]:focus {
+    border: 2px solid rgb(225, 30, 10);
+    -webkit-transition: border-color 2s;
+    transition: border-color 2s;
+}
+
+input[type=text] {
+    font-family: sans-serif;
+    opacity: 1.0;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+}
+
+input[type=submit] {
+    background-color: rgb(225, 30, 10);
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-transition: background-color 2s;
+    transition: background-color 2s;
+}
+input[type=submit]:hover {
+    background-color: rgb(28, 47, 140);
+}
+
+
+.download_btn{
+    text-align: center;
+    margin: 25px auto;
+    background-color: rgb(28, 47, 140);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 30%;
+    border: 1px solid white;
+    -webkit-transition: background-color 2s;
+    transition: background-color 2s;
+}
+
+.download_btn a {
+    font-family: 'terminator_real_nfiregular';
+    text-decoration: none;
+}
+.download_btn:hover {
+    background-color: rgb(225, 30, 10);
+}
+
+a {
+    color: white;
+    font-family: 'arial';
+}
