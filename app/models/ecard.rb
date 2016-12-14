@@ -10,24 +10,22 @@ class Ecard
   	false
 	end
 
-  # bisogna cambiare la logica che c'era in ERB
-  # per lo HAML provare a linkare direttamente il partial che serve.
+  # STRUTTURA BASE
+  # haml_template = File.read('config/templates/_pre_header.html.haml')
+  # template_engine = Haml::Engine.new(haml_template)
+  # template = template_engine.render
 
   def content
-    # haml_template = File.read('config/templates/_pre_header.html.haml')
-    # template_engine = Haml::Engine.new(haml_template)
-    # template = template_engine.render(self)
-    template = Haml::Engine.new(File.read("config/templates/template.html.haml"))
-    pre_header_template = Haml::Engine.new(File.read("config/templates/_pre_header.html.haml")).render
-    template.render
+    template = Haml::Engine.new(File.read("config/templates/template.haml"))
+    template.render(Object.new, { :@title => @title, :pre_header_template => pre_header_template })
   end
 
-  def image_link_template
-    image_link_template = Haml::Engine.new(File.read("config/templates/_image_link.html.haml")).render
+  def pre_header_template
+    Haml::Engine.new(File.read("config/templates/_pre_header.haml")).render(Object.new, :@pre_header => @pre_header)
   end
 
   def no_image_link_template
-    no_image_link_template = Haml::Engine.new(File.read("config/templates/_no_image_link.html.haml")).render
+    Haml::Engine.new(File.read("config/templates/_no_image_link.haml")).render
   end
 
   def write_on_file
