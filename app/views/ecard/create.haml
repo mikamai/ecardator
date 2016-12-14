@@ -1,4 +1,5 @@
 = render :inline => @ecard.content
+-# - binding.pry
 .download_btn.audioButton
   = audio_tag "http://www.mcello63.com/suonerie_varie/Sciacquone%20di%20WC.mp3", class: "audio-play"
   = link_to "Download Ecard", ecard_download_path

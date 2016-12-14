@@ -24,9 +24,9 @@ class Ecard
     Haml::Engine.new(File.read("config/templates/_pre_header.haml")).render(Object.new, :@pre_header => @pre_header)
   end
 
-  def no_image_link_template
-    Haml::Engine.new(File.read("config/templates/_no_image_link.haml")).render
-  end
+  # def forward_to_a_friend?
+  #   forward_to_a_friend == "0" ? false : true
+  # end
 
   def write_on_file
     path = "public/ecard.html"
@@ -35,7 +35,4 @@ class Ecard
     end
   end
 
-  def forward_to_a_friend?
-    forward_to_a_friend == "0" ? false : true
-  end
 end

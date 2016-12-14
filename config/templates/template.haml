@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title= @title
+    -# fogli di stile
+    :sass
+      #maintable
+        border: 1px solid red
+      td
+        text-align: center
+        font-family: arial
+        font-size: 10px
+        line-height: 13px
+        color: #727272
+  %body
+    %table#maintable{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0"}
+      = pre_header_template
+      %tr
+        %td
+          View this email in your browser
+      %tr
+        %td{:width => "600"}
+          %img#header{:border => "0", :height => "200", :width => "600", :src => "", :style => "display: block; margin: 0; padding: 0;" }
+      %tr
+        %td
+          Table Data
