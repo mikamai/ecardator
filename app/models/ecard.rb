@@ -4,7 +4,7 @@ class Ecard
 
   include ActiveModel::Model
 
-  attr_accessor :content, :brand, :lang, :forward_to_a_friend, :width, :height, :title, :pre_header, :src, :link, :alt, :cmp
+  attr_accessor :content, :brand, :lang, :forward_to_a_friend, :width, :height, :title, :src, :link, :alt, :cmp, :title_event, :desc_event, :link_event
 
 	def persisted?
   	false
@@ -22,7 +22,7 @@ class Ecard
   end
 
   def other_events_link
-    Haml::Engine.new(File.read("config/templates/_other_events_link.haml")).render(Object.new, :@src => @src)
+    Haml::Engine.new(File.read("config/templates/_other_events_link.haml")).render(Object.new, :@title_event => @title_event, :@desc_event => @desc_event, :@link_event => @link_event)
   end
 
   # def forward_to_a_friend?
