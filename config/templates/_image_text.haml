@@ -1,7 +1,6 @@
 %tr
   %td.main_image_table
-    %img{src: @src, alt: "main_image_text"}
+    %img{src: @src, alt: @alt}
   %td.main_image_table
-    %p
-      Xamarin Dev Days - Milan
-      sceglie il nostro spazio Venini42 per organizzare la tappa milanese dell'evento.
+    %h3=@date
+    %p=@text

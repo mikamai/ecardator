@@ -126,7 +126,14 @@ input[type=submit]:hover {
     background-color: rgb(28, 47, 140);
 }
 
+#addNewChoice {
+  font-size: 16px;
+}
+.remove-choice{
+  float: right;
+}
 
+/* pagina create ecard */
 .download_btn{
     text-align: center;
     margin: 25px auto;

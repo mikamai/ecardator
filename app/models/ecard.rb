@@ -4,7 +4,7 @@ class Ecard
 
   include ActiveModel::Model
 
-  attr_accessor :content, :brand, :lang, :forward_to_a_friend, :width, :height, :title, :src, :link, :alt, :cmp, :date_event, :community_event, :link_event
+  attr_accessor :content, :width, :height, :title, :src, :link, :alt, :date, :text, :date_event, :community_event, :link_event
 
 	def persisted?
   	false
@@ -18,7 +18,7 @@ class Ecard
   end
 
   def main_image_text
-    Haml::Engine.new(File.read("config/templates/_image_text.haml")).render(Object.new, :@src => @src)
+    Haml::Engine.new(File.read("config/templates/_image_text.haml")).render(Object.new, :@src => @src, :@alt => @alt, :@date => @date, :@text => @text )
   end
 
   def other_events_link
