@@ -10,18 +10,19 @@ class Ecard
   	false
 	end
 
-  # STRUTTURA BASE
-  # haml_template = File.read('config/templates/_pre_header.html.haml')
-  # template_engine = Haml::Engine.new(haml_template)
-  # template = template_engine.render
-
   def content
     template = Haml::Engine.new(File.read("config/templates/template.haml"))
-    template.render(Object.new, { :@title => @title, :pre_header_template => pre_header_template })
+    template.render(Object.new, { :@title => @title,
+                                  :main_image_text => main_image_text,
+                                  :other_events_link =>other_events_link })
   end
 
-  def pre_header_template
-    Haml::Engine.new(File.read("config/templates/_pre_header.haml")).render(Object.new, :@pre_header => @pre_header)
+  def main_image_text
+    Haml::Engine.new(File.read("config/templates/_image_text.haml")).render(Object.new, :@src => @src)
+  end
+
+  def other_events_link
+    Haml::Engine.new(File.read("config/templates/_other_events_link.haml")).render(Object.new, :@src => @src)
   end
 
   # def forward_to_a_friend?

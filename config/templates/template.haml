@@ -7,17 +7,31 @@
     :sass
       #maintable
         border: 1px solid red
+        padding: 0
       td
         text-align: center
         font-family: arial
         font-size: 10px
         line-height: 13px
         color: #727272
+        padding: 0
       #browser_view_link
         color: #727272
       #container
         border: 1px solid red
         width: 100%
+      .main_image_table
+        width: 50%
+        max-width: 300px
+      #call_to_action
+        width: 100%
+        padding: 15px
+        background: orange
+      #other_events
+        width: 100%
+      .event_link
+        font-size: 16px
+        padding: 10px
       #footer_social
         border: 1px solid blue
         background-color: gainsboro
@@ -26,21 +40,26 @@
         padding: 20px 0
   %body
     %table#maintable{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0"}
-      -# = pre_header_template
       %tr
-        %td
+        %td{style: "padding: 20px 0;"}
           %a#browser_view_link{href: "#"}
             View this email in your browser
-      -# header logo
+      -# metti qui header logo
       %tr
         %td{width: "600"}
           %img#header{border: "0", height: "200", width: "600", src: "", alt: "header_logo"}
       %tr
         %td
           %table#container
-            %tr
-              %td
-                BODY
+            = main_image_text
+      %tr
+        %td
+          %button#call_to_action
+            call to action
+      %tr
+        %td
+          %table#other_events
+            = other_events_link
       %tr
         %td
           %table#footer_social
