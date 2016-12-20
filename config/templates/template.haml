@@ -23,10 +23,12 @@
       .main_image_table
         width: 50%
         max-width: 300px
+        font-size: 16px
+        line-height: 25px
       #call_to_action
         width: 100%
         padding: 15px
-        background: orange
+        background: gainsboro
       #other_events
         width: 100%
       .event_link
@@ -56,6 +58,7 @@
         %td
           %button#call_to_action
             call to action
+      -# -if @title_event?
       %tr
         %td
           %table#other_events
@@ -65,22 +68,22 @@
           %table#footer_social
             %tr
               %td{colspan: "2", style: "padding: 25px;"}
-                %img{src: "", width: "60", height: "60"}
-                %img{src: "", width: "60", height: "60"}
+                %img{src: "https://gallery.mailchimp.com/5063c757c25f0606e64840c4b/images/f1d01695-9e19-4d60-aed6-7e553d333c45.png", width: "60", height: "60"}
+                %img{src: "https://gallery.mailchimp.com/5063c757c25f0606e64840c4b/images/f1d01695-9e19-4d60-aed6-7e553d333c45.png", width: "60", height: "60"}
             %tr
               %td{colspan: "2"}
                 <strong>Venini 42</strong> è un progetto realizzato da <strong>Mikamai</strong> e <strong>Linkme</strong>
             %tr
               %td.social_link_icon
                 social mikamai
-                %img{src: "", width: "30", height: "30"}
-                %img{src: "", width: "30", height: "30"}
-                %img{src: "", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
               %td.social_link_icon
                 social linkme
-                %img{src: "", width: "30", height: "30"}
-                %img{src: "", width: "30", height: "30"}
-                %img{src: "", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
             %tr
               %td{colspan: "2", style: "padding: 30px 0"}
                 Copyright © 2016 Venini42, All rights reserved.

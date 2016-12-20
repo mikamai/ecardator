@@ -1,18 +1,18 @@
-@font-face {
+/*@font-face {
     font-family: 'terminator_real_nfiregular';
     src: url('fonts/terminator_real_nfi-webfont.woff2') format('woff2'),
          url('fonts/terminator_real_nfi-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
-*{
+/**{
   font-family: 'terminator_real_nfiregular';
-}
+}*/
 
 
 body {
-    background: url(terminator.jpg);
+    /*background: url(terminator.jpg);*/
     background-repeat: no-repeat;
     background-size: 700px;
     background-color: black;
