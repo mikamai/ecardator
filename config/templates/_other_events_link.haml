@@ -1,9 +1,9 @@
 -# ciclo per iterare gli eventi (devono essere disposti a 3 a 3)
-- @date_event.zip(@community_event, @link_event, (1..10)) do |date, community, link, id|
+- @date_event.zip(@community_event, @link_event, @name_link_event, (1..10)) do |date, community, link, name, id|
   - if id == 0 || id == 4 || id == 7 || id == 10
     %tr
   %td.event_link
     =date
     =community
     %a{href: link}
-      =link
+      =name
