@@ -6,41 +6,59 @@
     -# fogli di stile
     :sass
       #maintable
-        border: 1px solid red
+        //border: 1px solid red
         padding: 0
+        width: 600px
+        font-family: "FrutigerLTW01-87ExtraBk", FrutigerLTW01-55Roman, helvetica, Arial, sans-serif
       td
         text-align: center
-        font-family: arial
-        font-size: 10px
+        font-size: 12px
         line-height: 13px
         color: black
         padding: 0
       #browser_view_link
         color: #727272
       #container
-        border: 1px solid red
+        //border: 1px solid red
         width: 100%
+        padding: 50px 0
+        background-color: #a35b7f
       .main_image_table
         width: 50%
         max-width: 300px
         font-size: 16px
         line-height: 25px
-        color: white
+        img
+          max-width: 90%
+      #main_text_table
+        padding: 0 10px 10px 10px
+        vertical-align: top
+        h3
+          text-align: left
+          margin: 0
+        p
+          text-align: left
       #call_to_action
         width: 100%
         padding: 15px
         background: gainsboro
+        border: 0
+        font-size: 16px
       #other_events
         width: 100%
       .event_link
         font-size: 16px
         padding: 10px
+        line-height: 20px
+        width: 180px
+        text-align: center
       #footer_social
-        border: 1px solid blue
+        //border: 1px solid blue
         background-color: #28a1a1
         width: 100%
       .social_link_icon
-        padding: 20px 0
+        width: 300px
+
   %body
     %table#maintable{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0"}
       %tr
@@ -72,10 +90,10 @@
                 %img{src: "https://gallery.mailchimp.com/5063c757c25f0606e64840c4b/images/f1d01695-9e19-4d60-aed6-7e553d333c45.png", width: "60", height: "60"}
                 %img{src: "https://gallery.mailchimp.com/5063c757c25f0606e64840c4b/images/f1d01695-9e19-4d60-aed6-7e553d333c45.png", width: "60", height: "60"}
             %tr
-              %td{colspan: "2"}
+              %td{colspan: "2", style: "padding: 30px 0;"}
                 <strong>Venini 42</strong> è un progetto realizzato da <strong>Mikamai</strong> e <strong>Linkme</strong>
             %tr
-              %td.social_link_icon
+              %td.social_link_icon{style: "border-right: 1px solid black"}
                 social mikamai
                 %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
                 %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}

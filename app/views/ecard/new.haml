@@ -8,6 +8,7 @@
         -#     = f.label 'Color'
         -#     \:
         -#     \#{f.select :brand, ['blu', 'giallo']}
+        = f.label :title
         %br/
         = f.text_field :title
         %br/
@@ -41,8 +42,13 @@
         %br/
         -# = f.submit "Create Ecard"
         .fields
-          #choose_image
-            %a#addNewChoice{:href => "#"} Aggiungi evento
+          #add_event
+            #button_new_choice
+              %a#addNewChoice{:href => "#"} Aggiungi evento
+            .form-select
+              .first-form-select_3
+                = f.label 'Color'
+                \#{f.select :title, ['blu', 'verde', 'viola']}
           #new_choice_form{:style => "display: none;"}
             -# = render "new_link"
         = f.submit "Create Ecard"
