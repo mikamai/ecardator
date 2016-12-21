@@ -1,57 +1,48 @@
-%h1 Ecardator
-%h2 Le eCard ribelli
-.content
-  = form_for @ecard, url: {action: "create"} do |f|
-    .form-div
-      -# .form-select
-      -#   .first-form-select_1
-      -#     = f.label 'Brand'
-      -#     \:
-      -#     \#{f.select :brand, ['mikamai', 'linkme']}
-      -#   .first-form-select_2
-      -#     = f.label 'Language'
-      -#     \:
-      -#     \#{f.select :lang, ['en', 'it']}
-      -#   .first-form-select_3
-      -#     = f.label 'Forward to a friend'
-      -#     \:
-      -#     \#{f.check_box :forward_to_a_friend}
-      = f.label :title
-      %br/
-      = f.text_field :title
-      %br/
-      = f.label :width
-      %br/
-      = f.text_field :width, :value => '300'
-      %br/
-      = f.label :height
-      %br/
-      = f.text_field :height
-      %br/
-      = f.label :src
-      %br/
-      = f.text_field :src
-      %br/
-      = f.label :date
-      %br/
-      = f.text_field :date
-      %br/
-      = f.label :text
-      %br/
-      = f.text_field :text
-      %br/
-      = f.label :link
-      %br/
-      = f.text_field :link
-      %br/
-      = f.label :alt
-      %br/
-      = f.text_field :alt
-      %br/
-      -# = f.submit "Create Ecard"
-      .fields
-        #choose_image
-          %a#addNewChoice{:href => "#"} Aggiungi evento
-        #new_choice_form{:style => "display: none;"}
-          -# = render "new_link"
-      = f.submit "Create Ecard"
+.container
+  %h1#ecardator Ecardator
+  .content
+    = form_for @ecard, url: {action: "create"} do |f|
+      .form-div
+        -# .form-select
+        -#   .first-form-select_1
+        -#     = f.label 'Color'
+        -#     \:
+        -#     \#{f.select :brand, ['blu', 'giallo']}
+        %br/
+        = f.text_field :title
+        %br/
+        = f.label :width
+        %br/
+        = f.text_field :width, :value => '300'
+        %br/
+        = f.label :height
+        %br/
+        = f.text_field :height
+        %br/
+        = f.label :src
+        %br/
+        = f.text_field :src
+        %br/
+        = f.label :date
+        %br/
+        = f.text_field :date
+        %br/
+        = f.label :text
+        %br/
+        = f.text_field :text
+        %br/
+        = f.label :link
+        %br/
+        = f.text_field :link
+        %br/
+        = f.label :alt
+        %br/
+        = f.text_field :alt
+        %br/
+        -# = f.submit "Create Ecard"
+        .fields
+          #choose_image
+            %a#addNewChoice{:href => "#"} Aggiungi evento
+          #new_choice_form{:style => "display: none;"}
+            -# = render "new_link"
+        = f.submit "Create Ecard"
