@@ -40,6 +40,7 @@
         %br/
         = f.text_field :alt
         %br/
+        #maintable
         -# = f.submit "Create Ecard"
         .fields
           #add_event
@@ -48,7 +49,7 @@
             .form-select
               .first-form-select_3
                 = f.label 'Color'
-                \#{f.select :title, ['blu', 'verde', 'viola']}
+                \#{f.select :color_template, [['verde','#78992e'],['viola','#a35b7f'],['giallo','#d99116']]}
           #new_choice_form{:style => "display: none;"}
             -# = render "new_link"
         = f.submit "Create Ecard"

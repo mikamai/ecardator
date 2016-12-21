@@ -2,10 +2,9 @@
 - @date_event.zip(@community_event, @link_event, @name_link_event, (1..10)) do |date, community, link, name, id|
   - if id == 0 || id == 4 || id == 7 || id == 10
     %tr
-  %td.event_link
-    =date
-    %br
-    =community
-    %br
-    %a{href: link}
-      =name
+  %td.event_link_container
+    %p.event_date_title=date
+    %p=community
+    %p
+      %a.event_link{href: link, style: "color: #{@color_template}"}
+        =name

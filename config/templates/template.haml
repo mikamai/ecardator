@@ -5,6 +5,10 @@
     %title= @title
     -# fogli di stile
     :sass
+      $green: #78992e
+      $yellow: #d99116
+      $purple: #a35b7f
+      $blue: #28a1a1
       #maintable
         //border: 1px solid red
         padding: 0
@@ -22,7 +26,7 @@
         //border: 1px solid red
         width: 100%
         padding: 50px 0
-        background-color: #a35b7f
+        //background-color: $purple
       .main_image_table
         width: 50%
         max-width: 300px
@@ -38,6 +42,8 @@
           margin: 0
         p
           text-align: left
+      .event_date_title
+        font-weight: bold
       #call_to_action
         width: 100%
         padding: 15px
@@ -46,15 +52,18 @@
         font-size: 16px
       #other_events
         width: 100%
-      .event_link
+      .event_link_container
         font-size: 16px
         padding: 10px
         line-height: 20px
         width: 180px
         text-align: center
+      .event_link
+        text-decoration: none
+        //color: $purple
       #footer_social
         //border: 1px solid blue
-        background-color: #28a1a1
+        background-color: $blue
         width: 100%
       .social_link_icon
         width: 300px
@@ -71,12 +80,12 @@
           %img#header{border: "0", height: "200", width: "600", src: "https://www.mikamai.com/assets/style/header-bgk-480.jpg", alt: "header_logo"}
       %tr
         %td
-          %table#container
+          %table#container{style: "background-color: #{@color_template};"}
             = main_image_text
       %tr
         %td
-          %button#call_to_action
-            call to action
+          %button#call_to_action{href: @link}
+            Vai all'evento
       -# -if @date_event?
       %tr
         %td
@@ -90,24 +99,26 @@
                 %img{src: "https://gallery.mailchimp.com/5063c757c25f0606e64840c4b/images/f1d01695-9e19-4d60-aed6-7e553d333c45.png", width: "60", height: "60"}
                 %img{src: "https://gallery.mailchimp.com/5063c757c25f0606e64840c4b/images/f1d01695-9e19-4d60-aed6-7e553d333c45.png", width: "60", height: "60"}
             %tr
-              %td{colspan: "2", style: "padding: 30px 0;"}
+              %td{colspan: "2", style: "padding-bottom: 30px;"}
                 <strong>Venini 42</strong> è un progetto realizzato da <strong>Mikamai</strong> e <strong>Linkme</strong>
             %tr
-              %td.social_link_icon{style: "border-right: 1px solid black"}
+              %td.social_link_icon{style: "border-right: 1px solid black;"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %br
                 social mikamai
-                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
-                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
-                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
               %td.social_link_icon
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
+                %br
                 social linkme
-                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
-                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
-                %img{src: "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png", width: "30", height: "30"}
             %tr
-              %td{colspan: "2", style: "padding: 30px 0"}
+              %td{colspan: "2", style: "padding: 30px 0;"}
                 Copyright © 2016 Venini42, All rights reserved.
             %tr
-              %td{colspan: "2", style: "padding-bottom: 30px"}
+              %td{colspan: "2", style: "padding-bottom: 30px;"}
                 Want to change how you receive these emails?
                 %br/
                 You can update your preferences or unsubscribe from this list
