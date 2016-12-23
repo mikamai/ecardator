@@ -3,14 +3,12 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
     %title= @title
-    -# fogli di stile
     :sass
       $green: #78992e
       $yellow: #d99116
       $purple: #a35b7f
       $blue: #28a1a1
       #maintable
-        //border: 1px solid red
         padding: 0
         width: 600px
         font-family: "FrutigerLTW01-87ExtraBk", FrutigerLTW01-55Roman, helvetica, Arial, sans-serif
@@ -23,10 +21,8 @@
       #browser_view_link
         color: #727272
       #container
-        //border: 1px solid red
         width: 100%
         padding: 50px 0
-        //background-color: $purple
       .main_image_table
         width: 50%
         max-width: 300px
@@ -63,14 +59,11 @@
         text-align: center
       .event_link
         text-decoration: none
-        //color: $purple
       #footer_social
-        //border: 1px solid blue
         background-color: $blue
         width: 100%
       .social_link_icon
         width: 300px
-
   %body
     %table#maintable{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0"}
       %tr
@@ -89,7 +82,6 @@
         %td{style: "background: gainsboro;"}
           %a#call_to_action{href: "#{@link}"}
             Vai all'evento
-      -# -if @date_event?
       %tr
         %td
           %table#other_events

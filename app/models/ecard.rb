@@ -14,6 +14,7 @@ class Ecard
     template = Haml::Engine.new(File.read("config/templates/template.haml"))
     template.render(Object.new, { :@title => @title,
                                   :@color_template => @color_template,
+                                  :@link => @link,
                                   :main_image_text => main_image_text,
                                   :other_events_link =>other_events_link })
   end
