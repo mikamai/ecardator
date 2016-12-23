@@ -3,53 +3,48 @@
   .content
     = form_for @ecard, url: {action: "create"} do |f|
       .form-div
-        -# .form-select
-        -#   .first-form-select_1
-        -#     = f.label 'Color'
-        -#     \:
-        -#     \#{f.select :brand, ['blu', 'giallo']}
         = f.label :title
-        %br/
+        %br
         = f.text_field :title
-        %br/
+        %br
         = f.label :width
-        %br/
+        %br
         = f.text_field :width, :value => '300'
-        %br/
+        %br
         = f.label :height
-        %br/
+        %br
         = f.text_field :height
-        %br/
+        %br
         = f.label :src
-        %br/
+        %br
         = f.text_field :src
-        %br/
+        %br
         = f.label :date
-        %br/
+        %br
         = f.text_field :date
-        %br/
+        %br
         = f.label :text
-        %br/
+        %br
         = f.text_field :text
-        %br/
+        %br
         = f.label :link
-        %br/
+        %br
         = f.text_field :link
-        %br/
+        %br
         = f.label :alt
-        %br/
+        %br
         = f.text_field :alt
-        %br/
+        %br
         #maintable
         -# = f.submit "Create Ecard"
         .fields
-          #add_event
+          .choice_event_container
             #button_new_choice
               %a#addNewChoice{:href => "#"} Aggiungi evento
             .form-select
-              .first-form-select_3
-                = f.label 'Color'
-                \#{f.select :color_template, [['verde','#78992e'],['viola','#a35b7f'],['giallo','#d99116']]}
-          #new_choice_form{:style => "display: none;"}
-            -# = render "new_link"
+              = f.label 'Color'
+              \#{f.select :color_template, [['verde','#78992e'],['viola','#a35b7f'],['giallo','#d99116']]}
+          #add_event
+            #new_choice_form{:style => "display: none;"}
+              -# = render "new_link"
         = f.submit "Create Ecard"

@@ -28,21 +28,19 @@ form
   font-family: sans-serif
 
 select
-  width: 30%
+  width: 40%
   padding: 12px 20px
-  margin: 8px 0
+  margin: 18px 0
   display: inline
-  border: 2px solid #ccc
+  border: 1px solid #ccc
   border-radius: 4px
   font-size: 12px
 
 .form-select
-  display: table
-  width: 100%
-  table-layout: fixed
-  padding-bottom: 10px
-  border-bottom: 1px solid #989898
-  margin-bottom: 20px
+  display: block
+  width: 50%
+  float: right
+  text-align: right
 
 .first-form-select_1
   display: table-cell
@@ -95,6 +93,18 @@ input[type=submit]
 input[type=submit]:hover
   background-color: rgb(28, 47, 140)
 
+#add_event
+  display: block
+  width: 100%
+  float: left
+
+.choice_event_container
+  float: left
+  width: 100%
+  margin-bottom: 20px
+  padding-bottom: 10px
+  border-bottom: 1px solid #989898
+
 #button_new_choice
   background-color: #e11e0a
   color: white
@@ -105,6 +115,8 @@ input[type=submit]:hover
   cursor: pointer
   text-align: center
   width: 20%
+  float: left
+  display: block
 
 #addNewChoice
   font-size: 16px
@@ -114,6 +126,8 @@ input[type=submit]:hover
 
 .remove-choice
   float: right
+  color: inherit
+  text-decoration: none
 
 .choiceForm
   width: 47%
