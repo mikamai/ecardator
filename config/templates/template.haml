@@ -46,10 +46,13 @@
         font-weight: bold
       #call_to_action
         width: 100%
-        padding: 15px
-        background: gainsboro
+        display: block
+        height: 100%
+        padding: 15px 0
         border: 0
         font-size: 16px
+        color: black
+        text-decoration: none
       #other_events
         width: 100%
       .event_link_container
@@ -83,8 +86,8 @@
           %table#container{style: "background-color: #{@color_template};"}
             = main_image_text
       %tr
-        %td
-          %button#call_to_action{href: @link}
+        %td{style: "background: gainsboro;"}
+          %a#call_to_action{href: "#{@link}"}
             Vai all'evento
       -# -if @date_event?
       %tr
