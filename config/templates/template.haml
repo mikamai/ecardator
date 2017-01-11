@@ -64,6 +64,7 @@
         width: 100%
       .social_link_icon
         width: 300px
+        text-decoration: none
   %body
     %table#maintable{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0"}
       %tr
@@ -98,17 +99,23 @@
                 <strong>Venini 42</strong> è un progetto realizzato da <strong>Mikamai</strong> e <strong>Linkme</strong>
             %tr
               %td.social_link_icon{style: "border-right: 1px solid black;"}
-                %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_Twitter.png", width: "30", height: "30"}
-                %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_FB.png", width: "30", height: "30"}
-                %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_LinkedIn.png", width: "30", height: "30"}
-                %br
-                social mikamai
+                %a{href: "https://twitter.com/Mikamai", class: "social_link_icon"}
+                  %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_Twitter.png", width: "30", height: "30"}
+                %a{href: "https://www.facebook.com/mikamai/", class: "social_link_icon"}
+                  %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_FB.png", width: "30", height: "30"}
+                %a{href: "https://www.linkedin.com/company/318048", class: "social_link_icon"}
+                  %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_LinkedIn.png", width: "30", height: "30"}
+                %p
+                  Mikamai
               %td.social_link_icon
-                %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_Twitter.png", width: "30", height: "30"}
-                %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_Google_Plus.png", width: "30", height: "30"}
-                %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_LinkedIn.png", width: "30", height: "30"}
-                %br
-                social linkme
+                %a{href: "https://twitter.com/LinkMeSRL", class: "social_link_icon"}
+                  %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_Twitter.png", width: "30", height: "30"}
+                %a{href: "https://plus.google.com/+LinkMeSRLMilano", class: "social_link_icon"}
+                  %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_Google_Plus.png", width: "30", height: "30"}
+                %a{href: "https://www.linkedin.com/company/969109", class: "social_link_icon"}
+                  %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_LinkedIn.png", width: "30", height: "30"}
+                %p
+                  LinkMe
             %tr
               %td{colspan: "2", style: "padding: 30px 0;"}
                 Copyright © 2016 Venini42, All rights reserved.
