@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post 'ecard/#{params[:ecard][:lang]}' => 'ecard#create'
 
   get 'ecard/download' => 'ecard#download'
-  
+
   resources :ecard
 
   # Example of regular route:

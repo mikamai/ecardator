@@ -1,6 +1,6 @@
 class EcardController < ApplicationController
   def new
-	@ecard = Ecard.new
+    @ecard = Ecard.new
   end
 
   def create
@@ -10,6 +10,6 @@ class EcardController < ApplicationController
   end
 
   def download
-  	send_file("#{Rails.root}/public/ecard.html")
+    send_file("#{Rails.root}/public/ecard.html")
   end
 end
