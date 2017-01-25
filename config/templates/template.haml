@@ -8,6 +8,7 @@
       $yellow: #d99116
       $purple: #a35b7f
       $blue: #28a1a1
+      $mika_color: #00b0a7
       #maintable
         padding: 0
         width: 600px
@@ -59,8 +60,9 @@
         text-align: center
       .event_link
         text-decoration: none
+        color: $mika_color
       #footer_social
-        background-color: $blue
+        background: url(http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Background-Footer-Newsletter-Mika.jpg)
         width: 100%
       .social_link_icon
         width: 300px
@@ -74,15 +76,15 @@
       -# metti qui header logo
       %tr
         %td{width: "600"}
-          %img#header{border: "0", height: "200", width: "600", src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Header-Newsletter-Mikamai.jpg", alt: "header_logo"}
+          %img#header{border: "0", height: "200", width: "600", src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Header-Newsletter-Mikamai_2.jpg", alt: "header_logo"}
       %tr
         %td
-          %table#container{style: "background-color: #{@color_template};"}
+          %table#container
             = main_image_text
-      %tr
-        %td{style: "background: gainsboro;"}
-          %a#call_to_action{href: "#{@link}"}
-            Vai all'evento
+      -# %tr
+      -#   %td{style: "background: gainsboro;"}
+      -#     %a#call_to_action{href: "#{@link}"}
+      -#       Vai all'evento
       %tr
         %td
           %table#other_events
@@ -98,7 +100,7 @@
               %td{colspan: "2", style: "padding-bottom: 30px;"}
                 <strong>Venini 42</strong> è un progetto realizzato da <strong>Mikamai</strong> e <strong>LinkMe</strong>
             %tr
-              %td.social_link_icon{style: "border-right: 1px solid black;"}
+              %td.social_link_icon
                 %a{href: "https://twitter.com/Mikamai", class: "social_link_icon"}
                   %img{src: "http://mikamaiblog.s3.amazonaws.com/uploads/Newsletter/Icona_Twitter.png", width: "30", height: "30"}
                 %a{href: "https://www.facebook.com/mikamai/", class: "social_link_icon"}
