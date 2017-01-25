@@ -20,7 +20,7 @@ class Ecard
   end
 
   def main_image_text
-    Haml::Engine.new(File.read('config/templates/_image_text.haml')).render(Object.new, :@src => @src, :@alt => @alt, :@date => @date, :@text => @text)
+    Haml::Engine.new(File.read('config/templates/_image_text.haml')).render(Object.new, :@src => @src, :@alt => @alt, :@date => @date, :@text => @text, :@link => @link)
   end
 
   def other_events_link
